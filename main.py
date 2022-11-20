@@ -44,6 +44,6 @@ while i < maxPage:
         if placeVacancy is not None:
             placeVacancy = placeVacancy.text
 
-        data['data'].append({'Title': nameVacancy, 'Experience': experienceVacancy, 'Salary': salaryVacancy, 'Place': placeVacancy})
+        data['data'].append({'title': nameVacancy, 'work experience': experienceVacancy, 'salary': salaryVacancy, 'region': placeVacancy})
         with open('data.json', 'w') as file:
             json.dump(data, file, ensure_ascii=False)
