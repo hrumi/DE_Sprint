@@ -1,0 +1,29 @@
+def checkFunction(inputString):
+    sum = 0
+    sum1 = 0
+    sum2 = 0
+    
+    for s in inputString:
+        if s == "(":
+            sum = sum + 1
+        elif s == ")":
+            sum = sum - 1
+        elif s == "{":
+            sum1 = sum1 + 1
+        elif s == "}":
+            sum1 = sum1 - 1
+        elif s == "[":
+            sum2 = sum2 + 1
+        elif s == "]":
+            sum2 = sum2 - 1
+    
+    if sum != 0 | sum1 != 0 | sum2 != 0:
+        return False
+    else: 
+        return True
+
+
+
+print(checkFunction("((([])))"))
+print(checkFunction("()[]]][{"))
+
